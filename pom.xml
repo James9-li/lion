@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.chenxiaojie</groupId>
+    <groupId>com.james</groupId>
     <artifactId>lion</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1</version>
@@ -24,22 +24,22 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.chenxiaojie</groupId>
+                <groupId>com.james</groupId>
                 <artifactId>lion-api</artifactId>
                 <version>${api.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.chenxiaojie</groupId>
+                <groupId>com.james</groupId>
                 <artifactId>lion-dal</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.chenxiaojie</groupId>
+                <groupId>com.james</groupId>
                 <artifactId>lion-biz</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.chenxiaojie</groupId>
+                <groupId>com.james</groupId>
                 <artifactId>lion-web</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -189,12 +189,12 @@
                 <version>2.4.2</version>
             </dependency>
             <dependency>
-                <groupId>com.chenxiaojie</groupId>
+                <groupId>com.james</groupId>
                 <artifactId>pigeon-utils</artifactId>
                 <version>0.0.1</version>
             </dependency>
             <dependency>
-                <groupId>com.chenxiaojie</groupId>
+                <groupId>com.james</groupId>
                 <artifactId>lion-utils</artifactId>
                 <version>0.0.1</version>
             </dependency>
@@ -208,14 +208,14 @@
             <!--</snapshots>-->
             <!--<id>public</id>-->
             <!--<name>Public Repositories</name>-->
-            <!--<url>http://localhost:8081/nexus/content/repositories/com.chenxiaojie/</url>-->
+            <!--<url>http://localhost:8081/nexus/content/repositories/com.james/</url>-->
         <!--</repository>-->
     <!--</repositories>-->
     <!--<pluginRepositories>-->
         <!--<pluginRepository>-->
             <!--<id>public</id>-->
             <!--<name>Public Repositories</name>-->
-            <!--<url>http://localhost:8081/nexus/content/repositories/com.chenxiaojie/</url>-->
+            <!--<url>http://localhost:8081/nexus/content/repositories/com.james/</url>-->
         <!--</pluginRepository>-->
     <!--</pluginRepositories>-->
 

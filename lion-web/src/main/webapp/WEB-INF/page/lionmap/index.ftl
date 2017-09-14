@@ -61,5 +61,5 @@
         </div>
     </div>
 </div>
-<#include "div/lionmap/lion-add-project-dialog.ftl">
+<#include "*/div/lionmap/lion-add-project-dialog.ftl">
 </body>

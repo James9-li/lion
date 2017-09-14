@@ -11,14 +11,14 @@
     <!--<property name="serviceInterface" value="LionService"/>-->
     <!--</bean>-->
 
-    <bean class="com.chenxiaojie.pigeon.registry.RemoteServiceRegistry">
-        <property name="servicePrefix" value="lion"></property>
-        <property name="services">
-            <map>
-                <!--<entry key="lionService" value-ref="lionService"></entry>-->
-                <entry key="lionManagerService" value-ref="lionManagerService"></entry>
-                <entry key="lionRegisterListenerService" value-ref="lionRegisterListenerService"/>
-            </map>
-        </property>
-    </bean>
+    <!--<bean class="com.chenxiaojie.pigeon.registry.RemoteServiceRegistry">-->
+        <!--<property name="servicePrefix" value="lion"></property>-->
+        <!--<property name="services">-->
+            <!--<map>-->
+                <!--&lt;!&ndash;<entry key="lionService" value-ref="lionService"></entry>&ndash;&gt;-->
+                <!--<entry key="lionManagerService" value-ref="lionManagerService"></entry>-->
+                <!--<entry key="lionRegisterListenerService" value-ref="lionRegisterListenerService"/>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
 </beans>

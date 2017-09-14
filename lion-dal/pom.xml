@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>lion</artifactId>
-        <groupId>com.chenxiaojie</groupId>
+        <groupId>com.james</groupId>
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -85,6 +85,10 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.james</groupId>
+            <artifactId>lion-api</artifactId>
         </dependency>
     </dependencies>
 </project>

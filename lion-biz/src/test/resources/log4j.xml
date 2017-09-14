@@ -16,14 +16,14 @@
     </appender>
 
     <appender name="defaultAppender" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/data/chenxiaojie/default.log"/>
+        <param name="File" value="/data/james/default.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d %p [%t] %l --> %m%n"/>
         </layout>
     </appender>
 
     <appender name="mybatisAppender" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/data/chenxiaojie/mybatis.log"/>
+        <param name="File" value="/data/james/mybatis.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d %p [%t] %l --> %m%n"/>
         </layout>

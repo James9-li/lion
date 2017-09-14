@@ -15,7 +15,7 @@
         http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
     <context:component-scan
-            base-package="com.chenxiaojie.lion.biz.impl,com.chenxiaojie.lion.remote.service.impl,com.chenxiaojie.lion.log,com.chenxiaojie.lion.notify.observer"/>
+            base-package="com.james.lion.biz.impl,com.james.lion.remote.service.impl,com.james.lion.log,com.james.lion.notify.observer"/>
     <aop:aspectj-autoproxy/>
 
     <!-- 配置事务管理器 -->
@@ -43,7 +43,7 @@
     <!-- 配置aop事务通知 -->
     <aop:config>
         <aop:pointcut id="txPointcut"
-                      expression="execution(* com.chenxiaojie.lion.biz.impl.*Impl.*(..))"/>
+                      expression="execution(* com.james.lion.biz.impl.*Impl.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
     </aop:config>
 </beans>

@@ -8,10 +8,10 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-    <context:component-scan base-package="com.chenxiaojie.lion.utils"/>
+    <context:component-scan base-package="com.james.lion.utils"/>
 
     <bean id="lionPlaceholder"
-          class="com.chenxiaojie.lion.spring.LionPlaceholder">
+          class="com.james.lion.spring.LionPlaceholder">
         <property name="locations">
             <list>
                 <value>classpath*:spring/appcontext.properties</value>
