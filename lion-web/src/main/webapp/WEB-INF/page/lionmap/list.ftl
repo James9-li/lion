@@ -20,15 +20,13 @@
             <ul class="nav nav-tabs" style="margin-bottom: 20px;">
                 <li role="presentation" <#if (env == 1)>class="active"</#if>><a href="/${projectName}/list/1">开发</a>
                 </li>
-                <li role="presentation" <#if (env == 2)>class="active"</#if>><a href="/${projectName}/list/2">Alpha</a>
+                <li role="presentation" <#if (env == 2)>class="active"</#if>><a href="/${projectName}/list/2">ARK</a>
                 </li>
-                <li role="presentation" <#if (env == 3)>class="active"</#if>><a href="/${projectName}/list/3">Beta</a>
+                <li role="presentation" <#if (env == 3)>class="active"</#if>><a href="/${projectName}/list/3">全仿真</a>
                 </li>
-                <li role="presentation" <#if (env == 4)>class="active"</#if>><a href="/${projectName}/list/4">预发</a>
+                <li role="presentation" <#if (env == 4)>class="active"</#if>><a href="/${projectName}/list/4">线上</a>
                 </li>
-                <li role="presentation" <#if (env == 5)>class="active"</#if>><a href="/${projectName}/list/5">线上</a>
-                </li>
-                <li role="presentation" <#if (env == 6)>class="active"</#if>><a href="/${projectName}/list/6">性能</a>
+                <li role="presentation" <#if (env == 5)>class="active"</#if>><a href="/${projectName}/list/5">性能</a>
                 </li>
             </ul>
             <table id="dataTable" class="table table-bordered table-hover">

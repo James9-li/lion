@@ -28,20 +28,20 @@ public class LionMapTest {
 
     @Test
     public void testInsert() {
-//        LionMap lionMap = LionMap.builder().mapKey("male").mapValue("陈孝杰").lazy(false).projectName("lion").build();
+//        LionMap lionMap = LionMap.builder().mapKey("male").mapValue("james").lazy(false).projectName("lion").build();
 //        LionMap lionMap2 = LionMap.builder().mapKey("female").mapValue("冬冬").lazy(true).projectName("lion").build();
         LionMap lionMap = new LionMap();
         lionMap.setMapKey("male");
-        lionMap.setMapValue("陈孝杰");
+        lionMap.setMapValue("james");
         lionMap.setLazy(false);
         lionMap.setProjectName("lion");
         lionMap.setEnv(LionEnv.DEVELOP.value);
         LionMap lionMap3 = new LionMap();
         lionMap3.setMapKey("male");
-        lionMap3.setMapValue("陈孝杰3");
+        lionMap3.setMapValue("james3");
         lionMap3.setLazy(true);
         lionMap3.setProjectName("lion");
-        lionMap3.setEnv(LionEnv.BETA.value);
+        lionMap3.setEnv(LionEnv.ARK.value);
 
         LionMap lionMap2 = new LionMap();
         lionMap2.setMapKey("female");
@@ -64,20 +64,20 @@ public class LionMapTest {
 
     @Test
     public void testInserts() {
-//        LionMap lionMap = LionMap.builder().mapKey("male").mapValue("陈孝杰").lazy(false).projectName("lion").build();
+//        LionMap lionMap = LionMap.builder().mapKey("male").mapValue("james").lazy(false).projectName("lion").build();
 //        LionMap lionMap2 = LionMap.builder().mapKey("female").mapValue("冬冬").lazy(true).projectName("lion").build();
         LionMap lionMap = new LionMap();
         lionMap.setMapKey("male");
-        lionMap.setMapValue("陈孝杰");
+        lionMap.setMapValue("james");
         lionMap.setLazy(false);
         lionMap.setProjectName("lion");
         lionMap.setEnv(LionEnv.DEVELOP.value);
         LionMap lionMap3 = new LionMap();
         lionMap3.setMapKey("male");
-        lionMap3.setMapValue("陈孝杰3");
+        lionMap3.setMapValue("james3");
         lionMap3.setLazy(true);
         lionMap3.setProjectName("lion");
-        lionMap3.setEnv(LionEnv.BETA.value);
+        lionMap3.setEnv(LionEnv.ARK.value);
 
         LionMap lionMap2 = new LionMap();
         lionMap2.setMapKey("female");
@@ -108,7 +108,7 @@ public class LionMapTest {
 
     @Test
     public void testDeleteByKeyProjectAndEnv() {
-        int result = lionMapDao.deleteByKeyProjectAndEnv("xxx", "lion-client", LionEnv.BETA.value);
+        int result = lionMapDao.deleteByKeyProjectAndEnv("xxx", "lion-client", LionEnv.ARK.value);
         System.out.println(result);
     }
 
@@ -123,7 +123,7 @@ public class LionMapTest {
         LionMap lionMap = new LionMap();
         lionMap.setId(134);
         lionMap.setMapKey("male");
-        lionMap.setMapValue("陈孝杰");
+        lionMap.setMapValue("james");
         lionMap.setLazy(false);
         lionMap.setProjectName("lion");
         lionMap.setEnv(LionEnv.ONLINE.value);
@@ -133,7 +133,7 @@ public class LionMapTest {
     @Test
     public void testUpdates() {
         LionMap lionMap = new LionMap();
-        lionMap.setMapKey("陈孝杰");
+        lionMap.setMapKey("james");
         lionMap.setMapValue("haah");
         lionMap.setLazy(false);
         lionMap.setProjectName("lion-client");
@@ -156,7 +156,7 @@ public class LionMapTest {
     public void testReplace() {
         LionMap lionMap = new LionMap();
         lionMap.setMapKey("邹冬冬");
-        lionMap.setMapValue("陈孝杰");
+        lionMap.setMapValue("james");
         lionMap.setLazy(false);
         lionMap.setProjectName("pigeon");
         lionMap.setEnv(LionEnv.ONLINE.value);

@@ -59,19 +59,16 @@
                                 <input name="envs" type="checkbox" id="env1" value="1" checked="checked"> 开发
                             </label>
                             <label class="checkbox-inline">
-                                <input name="envs" type="checkbox" id="env2" value="2" checked="checked"> Alpha
+                                <input name="envs" type="checkbox" id="env2" value="2" checked="checked"> ARK
                             </label>
                             <label class="checkbox-inline">
-                                <input name="envs" type="checkbox" id="env3" value="3" checked="checked"> Beta
+                                <input name="envs" type="checkbox" id="env3" value="3" checked="checked"> 全仿真
                             </label>
                             <label class="checkbox-inline">
-                                <input name="envs" type="checkbox" id="env4" value="4" checked="checked"> 预发
+                                <input name="envs" type="checkbox" id="env4" value="4" checked="checked"> 线上
                             </label>
                             <label class="checkbox-inline">
-                                <input name="envs" type="checkbox" id="env5" value="5" checked="checked"> 线上
-                            </label>
-                            <label class="checkbox-inline">
-                                <input name="envs" type="checkbox" id="env6" value="6" checked="checked"> 性能
+                                <input name="envs" type="checkbox" id="env5" value="5" checked="checked"> 性能
                             </label>
                         </div>
                     </div>

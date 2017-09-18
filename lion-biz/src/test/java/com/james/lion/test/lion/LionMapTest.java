@@ -1,10 +1,9 @@
 package com.james.lion.test.lion;
 
+import com.google.common.collect.Lists;
 import com.james.lion.biz.LionMapBiz;
 import com.james.lion.entity.LionMap;
 import com.james.lion.type.LionEnv;
-//import com.james.lion.utils.LionManager;
-import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.List;
+
+//import com.james.lion.utils.LionManager;
 
 /**
  * Created by james.li on 2015-03-05 15:44:31.
@@ -32,7 +35,7 @@ public class LionMapTest {
         for (LionMap lionMap : lionMaps) {
             System.out.println(lionMap);
         }
-//        log.info("#########娃哈哈陈孝杰");
+//        log.info("#########娃哈哈james");
 //        System.out.println(LionUtils.getProperty("lion.driverClassName", "default"));
 //        System.out.println(LionUtils.getProperty("wawa.sss", "default"));
 //        System.out.println(LionUtils.getProperty("wawa.ss", "default"));
@@ -42,16 +45,16 @@ public class LionMapTest {
     public void testInserts() {
         LionMap lionMap = new LionMap();
         lionMap.setMapKey("male");
-        lionMap.setMapValue("陈孝杰");
+        lionMap.setMapValue("james");
         lionMap.setLazy(false);
         lionMap.setProjectName("lion");
         lionMap.setEnv(LionEnv.DEVELOP.value);
         LionMap lionMap3 = new LionMap();
         lionMap3.setMapKey("male");
-        lionMap3.setMapValue("陈孝杰3");
+        lionMap3.setMapValue("james3");
         lionMap3.setLazy(true);
         lionMap3.setProjectName("lion");
-        lionMap3.setEnv(LionEnv.BETA.value);
+        lionMap3.setEnv(LionEnv.ARK.value);
 
         LionMap lionMap2 = new LionMap();
         lionMap2.setMapKey("female");
@@ -87,5 +90,27 @@ public class LionMapTest {
 //            System.out.println(lionMap);
 //        }
 //    }
+
+
+    public static void main(String args[])
+    {
+
+        String url = "jdbc:mysql://localhost:3306/lion";
+        String driver = "com.mysql.jdbc.Driver";
+        try{
+            Class.forName(driver);
+        }catch(Exception e){
+            System.out.println("无法加载驱动");
+        }
+
+        try {
+            Connection con = DriverManager.getConnection(url,"root","1qaz!QAZ");
+            if(!con.isClosed())
+                System.out.println("success");
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
 }

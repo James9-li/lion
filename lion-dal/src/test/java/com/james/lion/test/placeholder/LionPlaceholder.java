@@ -18,7 +18,7 @@ public class LionPlaceholder extends PropertyPlaceholderConfigurer {
     private Map<String, String> getRemoteProperties() {
         Map<String, String> remoteProperties = Maps.newHashMap();
         remoteProperties.put("age", "22");
-        remoteProperties.put("name", "陈孝杰");
+        remoteProperties.put("name", "james");
         remoteProperties.put("lion", "自己开发lion");
         remoteProperties.put("phoneNum", "13476147026");
         return remoteProperties;
