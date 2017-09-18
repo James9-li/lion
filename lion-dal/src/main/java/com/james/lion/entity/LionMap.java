@@ -10,6 +10,7 @@ public class LionMap {
     private int id;
     private String mapKey;
     private String mapValue;
+    private String mapDesc = "描述";
     private boolean lazy;
     private String projectName;
     private int env;

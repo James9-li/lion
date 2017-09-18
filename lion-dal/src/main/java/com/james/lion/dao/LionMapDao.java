@@ -15,14 +15,14 @@ public interface LionMapDao {
 
 
     //@SelectKey(before = false, keyProperty = "id", resultType = int.class, statementType = StatementType.STATEMENT, statement = "SELECT LAST_INSERT_ID() AS id")
-    @Insert("insert into lion_map(mapKey,mapValue,lazy,projectName,env) values(#{mapKey},#{mapValue},#{lazy},#{projectName},#{env})")
+    @Insert("insert into lion_map(mapKey,mapValue,mapDesc,lazy,projectName,env) values(#{mapKey},#{mapValue},#{mapDesc},#{lazy},#{projectName},#{env})")
     @SelectKey(before = false, resultType = int.class, keyProperty = "id", statement = "select @@IDENTITY as id")
     public int insert(LionMap lionMap);
 
     @Insert("<script>" +
-            "insert into lion_map(mapKey,mapValue,lazy,projectName,env) values" +
+            "insert into lion_map(mapKey,mapValue,mapDesc,lazy,projectName,env) values" +
             "<foreach collection='lionMapList' item='lionMap' separator=','>" +
-            "(#{lionMap.mapKey},#{lionMap.mapValue},#{lionMap.lazy},#{lionMap.projectName},#{lionMap.env})" +
+            "(#{lionMap.mapKey},#{lionMap.mapValue},#{lionMap.mapDesc},#{lionMap.lazy},#{lionMap.projectName},#{lionMap.env})" +
             "</foreach>" +
             "</script>")
     public int inserts(@Param("lionMapList") List<LionMap> lionMapList);
@@ -41,11 +41,11 @@ public interface LionMapDao {
             "</script>")
     public int deleteByKeyProjectAndEnvs(@Param("mapKey") String mapKey, @Param("projectName") String projectName, @Param("envs") int[] envs);
 
-    @Update("update lion_map set mapKey=#{mapKey},mapValue=#{mapValue},lazy=#{lazy},projectName=#{projectName},env=#{env} where id=#{id}")
+    @Update("update lion_map set mapKey=#{mapKey},mapValue=#{mapValue},mapDesc=#{mapDesc},lazy=#{lazy},projectName=#{projectName},env=#{env} where id=#{id}")
     public int update(LionMap lionMap);
 
     @Update("<script>" +
-            "update lion_map set mapValue=#{lionMap.mapValue},lazy=#{lionMap.lazy} where mapKey=#{lionMap.mapKey} and projectName=#{lionMap.projectName} and env in " +
+            "update lion_map set mapValue=#{lionMap.mapValue},mapDesc=#{lionMap.mapDesc},lazy=#{lionMap.lazy} where mapKey=#{lionMap.mapKey} and projectName=#{lionMap.projectName} and env in " +
             "<foreach collection='envs' item='env' open='(' separator=',' close=')'>" +
             "#{env}" +
             "</foreach>" +
@@ -73,17 +73,17 @@ public interface LionMapDao {
     public LionMap getByKeyProjectAndEnv(@Param("mapKey") String mapKey, @Param("projectName") String projectName, @Param("env") int env);
 
     @Select("<script>" +
-            "select id,mapKey,mapValue,lazy,projectName,env from lion_map where mapKey=#{mapKey} and projectName=#{projectName} and env in " +
+            "select id,mapKey,mapValue,mapDesc,lazy,projectName,env from lion_map where mapKey=#{mapKey} and projectName=#{projectName} and env in " +
             "<foreach collection='envs' item='env' open='(' separator=',' close=')'>" +
             "#{env}" +
             "</foreach>" +
             "</script>")
     public List<LionMap> getByKeyProjectAndEnvs(@Param("mapKey") String mapKey, @Param("projectName") String projectName, @Param("envs") int[] envs);
 
-    @Select("select id,mapKey,mapValue,lazy,projectName,env from lion_map where projectName=#{projectName} and env=#{env}")
+    @Select("select id,mapKey,mapValue,mapDesc,lazy,projectName,env from lion_map where projectName=#{projectName} and env=#{env}")
     public List<LionMap> getByProjectAndEnv(@Param("projectName") String projectName, @Param("env") int env);
 
-    @Select("select id,mapKey,mapValue,lazy,projectName,env from lion_map where projectName=#{projectName} and env=#{env} limit #{start}, #{size}")
+    @Select("select id,mapKey,mapValue,mapDesc,lazy,projectName,env from lion_map where projectName=#{projectName} and env=#{env} limit #{start}, #{size}")
     public List<LionMap> getPageByProjectAndEnv(@Param("projectName") String projectName, @Param("env") int env, @Param("start") int start, @Param("size") int size);
 
     @Select("select count(*) from lion_map where projectName=#{projectName} and env=#{env}")
@@ -92,6 +92,6 @@ public interface LionMapDao {
     @Select("select projectName from lion_map group by projectName")
     public List<String> getAllProjectNames();
 
-    @Select("select id,mapKey,mapValue,lazy,projectName,env from lion_map")
+    @Select("select id,mapKey,mapValue,mapDesc,lazy,projectName,env from lion_map")
     public List<LionMap> getAll();
 }

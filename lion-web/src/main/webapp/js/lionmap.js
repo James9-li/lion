@@ -43,6 +43,10 @@ function addLionMap(curEnv) {
         $.warning('value不能为空!', 3000);
         return;
     }
+    if (!$('#mapDesc').val()) {
+        $.warning('描述不能为空!', 3000);
+        return;
+    }
 
     var checks = false;
     var isDynamicAdd = false;
@@ -73,6 +77,8 @@ function addLionMap(curEnv) {
                             $('<td />').text(result.mapKey)
                         ).append(
                             $('<td />').text(result.mapValue)
+                        ).append(
+                            $('<td />').text(result.mapDesc)
                         ).append(
                             $('<td />').text(result.lazy ? '是' : '否')
                         ).append(
@@ -114,7 +120,8 @@ function renderUpdateDialog(id, curEnv) {
     var tds = $('#dataTable_tr_' + id + ' td');
     $('#mapKey').val(tds[1].innerHTML);
     $('#mapValue').val(tds[2].innerHTML);
-    if (tds[3].innerHTML == '是') {
+    $('#mapDesc').val(tds[3].innerHTML);
+    if (tds[4].innerHTML == '是') {
         $('#lazy input:radio:eq(0)').prop('checked', true);
         $('#lazy input:radio:eq(1)').prop('checked', false);
     } else {
@@ -167,7 +174,8 @@ function renderUpdateDialog(id, curEnv) {
                     if (isDynamicUpdate) {
                         tds[1].innerHTML = result.mapKey;
                         tds[2].innerHTML = result.mapValue;
-                        tds[3].innerHTML = result.lazy ? '是' : '否';
+                        tds[3].innerHTML = result.mapDesc;
+                        tds[4].innerHTML = result.lazy ? '是' : '否';
                     }
                     $.warning('更新成功!', 3000);
                     $('#lion-update-dialog').modal('hide');

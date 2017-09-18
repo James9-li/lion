@@ -27,6 +27,7 @@ public class LionEnvUtils {
             LionMap lion = new LionMap();
             lion.setProjectName(lionMap.getProjectName());
             lion.setMapValue(lionMap.getMapValue());
+            lion.setMapDesc(lionMap.getMapDesc());
             lion.setMapKey(lionMap.getMapKey());
             lion.setLazy(lionMap.isLazy());
             lion.setEnv(value);
@@ -41,6 +42,7 @@ public class LionEnvUtils {
             LionMap lion = new LionMap();
             lion.setProjectName(lionMap.getProjectName());
             lion.setMapValue(lionMap.getMapValue());
+            lion.setMapDesc(lionMap.getMapDesc());
             lion.setMapKey(lionMap.getMapKey());
             lion.setLazy(lionMap.isLazy());
             lion.setEnv(value);

@@ -33,8 +33,9 @@
                 <thead>
                 <tr>
                     <th width="10%">ID</th>
-                    <th width="30%">key</th>
-                    <th width="30%">value</th>
+                    <th width="25%">key</th>
+                    <th width="25%">value</th>
+                    <th width="10%">描述</th>
                     <th width="10%">是否懒加载</th>
                     <th width="20%">操作</th>
                 </tr>
@@ -45,6 +46,7 @@
                     <td>${lionMap.id}</td>
                     <td>${lionMap.mapKey}</td>
                     <td>${lionMap.mapValue}</td>
+                    <td>${lionMap.mapDesc}</td>
                     <td>${lionMap.lazy?string('是', '否')}</td>
                     <td>
                         <a class="btn btn-default btn-xs"

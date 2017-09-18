@@ -39,6 +39,14 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="mapDesc" class="col-sm-2 control-label">描述</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="mapDesc" placeholder="desc" value=""
+                                   name="mapDesc">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-sm-2 control-label">懒加载</label>
 
                         <div id="lazy" class="col-sm-10">
